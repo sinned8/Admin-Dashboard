@@ -22,40 +22,46 @@
 
 }
 
-
-
 .logo{
-    background-image: url(Images/atom.svg);
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     
+    
+    font-family: 'Roboto';
+    font-size: 2rem;
 }
-
+.logo img{
+    width: 55px;
+}
 .dashboard-container{
     display: grid;
     grid-row: 1 / -1;
     background-color: darkgray;
     height: 100%;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-
-
-.sec1,.sec2{
+ul{
+    margin-top: 1rem;
+    list-style-type: none;
+}
+li{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    list-style: none;
+    align-items: center;
+    gap: 10px;
+    margin: 1.7rem;
+    font-family: 'Roboto';
+    font-size: 1.3rem;
+    cursor: pointer;
 }
-
-.sec1 > li,
-.sec2 > li{
-    text-align: center;
-    display: block;
-    margin-bottom: 50px;
-    
-}
-.sec1 > li > img,
-.sec2 > li > img{
-    vertical-align: bottom;
+li img{
+    width: 24px;
+    height: 24px;
 }
 
 img{
