@@ -1,7 +1,10 @@
 # Admin-Dashboard
-Dennis Dust
+Dennis Dust 
+Admin Dashboard
+Vanilla HTML & CSS
 
 
+--= Instructions=--
 
 Step 2: Layout
 Start by writing out the HTML elements for the sidebar, header and main-content containers.

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Interval';
+    src: url(Fonts/Interval/Interval.otf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(Fonts/Roboto/Roboto-Regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+
+
+}
+
+
+
+.logo{
+    background-image: url(Images/atom.svg);
+    background-repeat: no-repeat;
+    
+}
+
+.dashboard-container{
+    display: grid;
+    grid-row: 1 / -1;
+    background-color: darkgray;
+    height: 100%;
+}
+
+
+
+.sec1,.sec2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.sec1 > li,
+.sec2 > li{
+    text-align: center;
+    display: block;
+    margin-bottom: 50px;
+    
+}
+.sec1 > li > img,
+.sec2 > li > img{
+    vertical-align: bottom;
+}
+
+img{
+    width: 40px;
+}
