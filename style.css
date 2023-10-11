@@ -11,23 +11,24 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto';
 }
+
+/* Main container */
 .container{
     display: grid;
     height: 100vh;
     width: 100vw;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
-
-
+    grid-template-rows: .8fr 4fr;
 }
+
+/* Side bar */
 
 .logo{
     display: flex;
     align-items: center;
     gap: 10px;
-    
-    
     font-family: 'Roboto';
     font-size: 2rem;
 }
@@ -37,7 +38,8 @@
 .dashboard-container{
     display: grid;
     grid-row: 1 / -1;
-    background-color: darkgray;
+    background-color: #0284c7;
+    color: white;
     height: 100%;
     width: 20%;
     position: fixed;
@@ -45,6 +47,7 @@
     left: 0;
     z-index: 1;
 }
+/* Sidebar list */
 
 ul{
     margin-top: 1rem;
@@ -62,13 +65,14 @@ li{
 li img{
     width: 24px;
     height: 24px;
+    
 }
 
 img{
     width: 40px;
 }
 
-
+/* Header & searchbar*/
 .header{
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -77,7 +81,7 @@ img{
     align-items: center;
     gap: 15px;
     padding: 10px;
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 50px 15px -3px rgb(0 0 0 / 0.1), 0 8px 6px -4px rgb(0 0 0 / 0.1);
     
 }
 .search-bar{
@@ -116,16 +120,14 @@ img[src="Images/bell-outline.svg"]{
     background-image: url(Images/main-user.svg);
     background-size: 100%;
 }
+
+/* Header under search bar */
 .h-row2{
     display: flex;
     width: 100%;
     grid-column: 1 / -1;
     justify-content: space-between;
 }
-
-
-
-
 
 .pf-items{
     display: flex;
@@ -162,41 +164,31 @@ img[src="Images/bell-outline.svg"]{
     padding: 10px 35px;
     border-radius: 15px;
     border: none;
-    background-color: rgb(26, 26, 26);
+    background-color: #0284c7;
     color: white;
     cursor: pointer;
 }
 
+/* Main content (projects, announcements & trending */
+
 .main{
-    /* margin: 20px;
-    margin-top: 35px;
-    display: grid;
-    grid-column: 2 / -1;
-    grid-row: 2/-1;
-    gap: 15px;
-    grid-template-areas: 
-    "card card card card card ann"
-    "card card card card card tren"; */
     grid-column: 2/3;
     display: grid;
-    grid-template-columns: 2fr .67fr;
+    grid-template-columns: 2fr 1fr;
     gap: 25px;
     padding: 3rem;
 }
 
+/* Projects */
+
 .tiles{
-    /* grid-area: 'card';
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 100%));
-    grid-template-rows: repeat(3, minmax(300px, 100%)); */
     grid-row: 1/3;
 }
 .project-title{
-    position: absolute;
-    top: -40px;
+    position: relative;
     left: 20px;
 }
+
 .tile-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -206,33 +198,75 @@ img[src="Images/bell-outline.svg"]{
 }
 .tile{
     display: grid;
-    border-left: black 10px solid;
+    border-left: rgb(206, 202, 1) 10px solid;
     padding: 15px;
     border-radius: 10px;
     margin: 15px;
-    background-color: antiquewhite;
+    background-color: rgb(233, 233, 233);
+}
+.title{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+.tile-text{
+    font-size: 15px;
+    color: #666666;
+}
+.tile-reactions{
+    justify-self: end;
+    margin-top: auto;
+}
+.tile-reactions img{
+    margin: 8px 10px;
+    height: 24px;
+    width: 24px;
 }
 
 
-
+/* Announcements */
 .ann{
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
 }
 .ann-tile{
-    background-color: antiquewhite;
     padding: 1rem 1.9rem;
+    font-family: 'Roboto';
+    border-bottom: 3px solid rgb(207, 206, 206);
+}
+.ann-title{
+    font-weight: bold;
+    font-size: large;
+}
+.ann-text{
+    font-size: small;
+    color: #666666;
 }
 
+/* Trending */
+
 .trending{   
-   height: 89%;
-   background-color: antiquewhite;
-    
-    
+   margin-top: 50px;
 }
+
 .trending-tile{
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: min-content;
     padding: 1rem 1.9rem;
     align-items: center;
+    
+}
+
+.trending-user{
+    grid-column: 2;
+    padding: .5rem;
+}
+.sub{
+    font-size: 12px;
+    font-style: italic;
+    color: #666666;
+}
+.username{
+    font-size: 14px;
+    color: black;
 }
